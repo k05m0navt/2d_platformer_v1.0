@@ -1187,6 +1187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: open_door
       objectReference: {fileID: 0}
+    - target: {fileID: 1707257375540376, guid: d865d0cd03f92e1439f71e021b941cf0, type: 3}
+      propertyPath: m_TagString
+      value: OpenDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 4121763814437308, guid: d865d0cd03f92e1439f71e021b941cf0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1279,6 +1283,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &361862460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361862458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152be8841bb37df52bd3a9c5283cbdcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371425923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4252,6 +4268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  isKey: 0
   jumpForce: 6
   isGrounded: 0
   checkRadius: 0.5

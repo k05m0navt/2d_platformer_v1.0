@@ -11,11 +11,12 @@ public class Score : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<Text>();
-        scoreAmount = 0;
+        scoreAmount = Character.scoreAmount;
     }
 
     void Update()
     {
         scoreText.text = "Score: " + scoreAmount;
+        Character.scoreAmount = scoreAmount;
     }
 }

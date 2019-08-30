@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
 
     void checkCharacterKey()
     {
-        if (Character.isKey == true)
+        if (Character.isKeyValue == true)
         {
             sr.sprite = open_door;
         }

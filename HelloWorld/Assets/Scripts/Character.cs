@@ -5,8 +5,9 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public float speed;
-    public static bool isKey;
+    public bool isKey;
     public static bool isKeyValue;
+    public static int scoreAmount;
     public float jumpForce;
     private float moveInput;
     public bool isGrounded;
@@ -25,6 +26,7 @@ public class Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        scoreAmount = 0;
     }
 
     void checkJump()
