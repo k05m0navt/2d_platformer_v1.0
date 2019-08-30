@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class Character : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;
+    int scene_index;
+
 
     private void Start()
     {
@@ -82,6 +85,15 @@ public class Character : MonoBehaviour
     void checkKey()
     {
         isKey = isKeyValue;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            scene_index = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(scene_index);
+        }
     }
 
     private void FixedUpdate()
